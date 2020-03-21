@@ -42,9 +42,9 @@ class ActivityStore {
       });
     } catch (error) {
       runInAction('load activities error', () => {
-        console.log(error);
+        this.loadingInitial = false;
       });
-      this.loadingInitial = false;
+      console.log(error);
     }
   };
 
